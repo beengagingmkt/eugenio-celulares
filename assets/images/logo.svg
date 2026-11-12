@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1A54E8"/>
+      <stop offset="100%" stop-color="#0131CD"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="2" y="4" width="56" height="56" rx="16" fill="url(#blueGrad)"/>
+  
+  <rect x="16" y="12" width="28" height="40" rx="5" fill="#FFFFFF"/>
+  <rect x="19" y="16" width="22" height="28" rx="2" fill="#0131CD"/>
+  
+  <path d="M25 29L28.5 32.5L35 24" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="30" cy="48" r="1.5" fill="#0131CD"/>
+  
+  <path d="M44 8L39 17H44L41 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="68" y="30" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="900" font-size="22" fill="#0F172A" letter-spacing="-0.5">EUGÊNIO</text>
+  <text x="175" y="30" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="22" fill="#0131CD" letter-spacing="-0.5">CELULARES</text>
+  <text x="69" y="48" font-family="'Inter', -apple-system, sans-serif" font-weight="600" font-size="10" fill="#64748B" letter-spacing="1.2">ASSISTÊNCIA TÉCNICA • ALDEOTA</text>
+</svg>

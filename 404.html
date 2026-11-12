@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>404 — Página Não Encontrada | Eugênio Celulares</title>
+  <meta name="description" content="A página que você está procurando não existe ou foi movida. Volte para a página inicial da Eugênio Celulares ou fale conosco pelo WhatsApp.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0131CD">
+
+  <!-- Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Google Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef4ff',
+              100: '#dce8ff',
+              600: '#0131CD',
+              700: '#0025A3',
+              800: '#001E85',
+              900: '#011663',
+            },
+            whatsapp: {
+              DEFAULT: '#25D366',
+              hover: '#20bd5a',
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen antialiased selection:bg-[#0131CD] selection:text-white">
+
+  <!-- Header Simplificado -->
+  <header class="bg-white border-b border-slate-100 py-4 px-6 shadow-xs sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="assets/images/eugenio-avatar-mascot.webp" 
+             onerror="this.src='assets/images/eugenio-avatar-mascot.jpg'" 
+             alt="Eugênio Celulares" 
+             width="44" 
+             height="44" 
+             class="w-11 h-11 rounded-full border-2 border-[#0131CD] object-cover">
+        <div>
+          <span class="font-heading font-black text-lg tracking-tight text-slate-900 leading-none">
+            EUGÊNIO <span class="text-[#0131CD]">CELULARES</span>
+          </span>
+          <span class="block text-[10px] font-semibold text-slate-500 uppercase">Assistência Técnica • Aldeota</span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/5585988034843?text=Ol%C3%A1!%20Estava%20no%20site%20da%20Eug%C3%AAnio%20Celulares%20e%20preciso%20de%20ajuda." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="hidden sm:inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-sm transition-all">
+        <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+        <span>WhatsApp (85) 98803-4843</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal 404 -->
+  <main class="flex-1 flex items-center justify-center p-6 sm:p-12">
+    <div class="max-w-xl w-full bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-xl text-center space-y-6">
+      
+      <!-- Mascote Avatar com Badge 404 -->
+      <div class="relative inline-block mx-auto">
+        <div class="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-full p-1 bg-gradient-to-tr from-[#0131CD] to-sky-400 shadow-lg overflow-hidden">
+          <img src="assets/images/eugenio-avatar-mascot.webp" 
+               onerror="this.src='assets/images/eugenio-avatar-mascot.jpg'" 
+               alt="Eugênio Mascote" 
+               width="144" 
+               height="144" 
+               class="w-full h-full object-cover rounded-full">
+        </div>
+        <span class="absolute -bottom-2 -right-2 bg-[#0131CD] text-white font-heading font-black text-xs px-3 py-1 rounded-full shadow-md border-2 border-white">
+          ERRO 404
+        </span>
+      </div>
+
+      <div class="space-y-3">
+        <h1 class="font-heading font-black text-3xl sm:text-4xl text-slate-900 tracking-tight">
+          Ops! Aparelho fora de área?
+        </h1>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-md mx-auto">
+          A página que você tentou acessar não existe, foi alterada ou o link está incorreto. Mas não se preocupe: a <strong>Eugênio Celulares</strong> resolve!
+        </p>
+      </div>
+
+      <!-- Ações de Retorno e Conversão -->
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0131CD] hover:bg-brand-700 text-white font-extrabold text-sm px-6 py-3.5 rounded-xl shadow-md transition-all">
+          <i data-lucide="home" class="w-4 h-4"></i>
+          <span>Voltar à Página Inicial</span>
+        </a>
+
+        <a href="https://wa.me/5585988034843?text=Ol%C3%A1,%20Eug%C3%AAnio%20Celulares!%20Acessei%20um%20link%20que%20deu%20erro%20e%20gostaria%20de%20falar%20com%20a%20equipe." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white font-extrabold text-sm px-6 py-3.5 rounded-xl shadow-md transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Links Rápidos de Socorro -->
+      <div class="pt-6 border-t border-slate-100 text-xs text-slate-500">
+        <span>Ou vá direto para:</span>
+        <div class="flex flex-wrap justify-center gap-3 mt-2 font-semibold text-[#0131CD]">
+          <a href="/#servicos" class="hover:underline">Troca de Tela</a>
+          <span>•</span>
+          <a href="/#servicos" class="hover:underline">Troca de Bateria</a>
+          <span>•</span>
+          <a href="/#aparelhos" class="hover:underline">Simulador de Orçamento</a>
+          <span>•</span>
+          <a href="/#contato" class="hover:underline">Localização na Aldeota</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Rodapé Simples -->
+  <footer class="bg-white border-t border-slate-200 py-6 px-4 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>© 2026 Eugênio Celulares • Rua Torres Câmara, 644 - Loja 03, Aldeota — Fortaleza/CE</div>
+      <div>Telefone: (85) 3224-5444 • WhatsApp: (85) 98803-4843</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
+

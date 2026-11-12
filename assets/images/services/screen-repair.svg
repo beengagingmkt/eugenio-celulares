@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="scBg" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="scPhone" x1="140" y1="40" x2="260" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="scScreen" x1="150" y1="60" x2="250" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="16" fill="url(#scBg)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <circle cx="60" cy="50" r="3" fill="#93C5FD" opacity="0.5"/>
+  <circle cx="340" cy="70" r="4" fill="#93C5FD" opacity="0.5"/>
+  <circle cx="330" cy="240" r="3" fill="#93C5FD" opacity="0.5"/>
+  <circle cx="70" cy="230" r="4" fill="#93C5FD" opacity="0.5"/>
+
+  <!-- Phone shadow -->
+  <rect x="135" y="45" width="130" height="220" rx="24" fill="#1E3A8A" opacity="0.12"/>
+  
+  <!-- Smartphone Frame -->
+  <rect x="130" y="38" width="140" height="224" rx="26" fill="url(#scPhone)" stroke="#475569" stroke-width="3"/>
+  <!-- Screen glass -->
+  <rect x="138" y="48" width="124" height="204" rx="18" fill="url(#scScreen)"/>
+  
+  <!-- Dynamic Island / Speaker -->
+  <rect x="175" y="55" width="50" height="9" rx="4.5" fill="#0F172A"/>
+  
+  <!-- Crack / Before line with transition to new crystal display -->
+  <path d="M145 100 L185 130 L170 170 L210 190" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4" stroke-dasharray="3 3"/>
+  
+  <!-- Suction cup / Repair tool badge -->
+  <g transform="translate(230, 180)">
+    <circle cx="35" cy="35" r="32" fill="#FFFFFF" filter="drop-shadow(0px 8px 16px rgba(13,80,216,0.15))"/>
+    <circle cx="35" cy="35" r="28" fill="#0131CD"/>
+    <!-- Sparkle/Shield icon -->
+    <path d="M35 22L37.5 30.5L46 32L38.5 36.5L40 45L35 39.5L30 45L31.5 36.5L24 32L32.5 30.5L35 22Z" fill="#FACC15"/>
+  </g>
+
+  <!-- High Definition badge -->
+  <rect x="50" y="125" width="85" height="32" rx="16" fill="#FFFFFF" filter="drop-shadow(0px 4px 10px rgba(0,0,0,0.06))"/>
+  <text x="62" y="146" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#0131CD">OLED / 4K</text>
+
+  <!-- Touch response indicator -->
+  <circle cx="200" cy="150" r="14" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
+  <circle cx="200" cy="150" r="22" stroke="#FFFFFF" stroke-width="1.5" opacity="0.4"/>
+</svg>

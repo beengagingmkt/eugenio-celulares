@@ -1,0 +1,6 @@
+# Robots.txt for Eugênio Celulares
+User-agent: *
+Allow: /
+
+Sitemap: https://eugeniocelulares.com.br/sitemap.xml
+

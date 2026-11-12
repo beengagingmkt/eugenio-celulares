@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="diagBg" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="pcbGrad" x1="120" y1="60" x2="280" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="16" fill="url(#diagBg)"/>
+
+  <!-- Motherboard PCB Base -->
+  <rect x="110" y="60" width="180" height="180" rx="14" fill="url(#pcbGrad)" stroke="#38BDF8" stroke-width="2"/>
+  
+  <!-- Circuit Traces -->
+  <path d="M130 90H180V120H240" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M130 180H160V150H210V180H260" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M190 70V100" stroke="#38BDF8" stroke-width="2"/>
+  <path d="M220 230V190" stroke="#38BDF8" stroke-width="2"/>
+  
+  <!-- CPU Chip -->
+  <rect x="170" y="115" width="60" height="60" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+  <text x="183" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="12" fill="#F59E0B">CPU</text>
+  
+  <!-- Magnifying Glass / Diagnostic -->
+  <g transform="translate(200, 130)">
+    <circle cx="50" cy="50" r="42" fill="#FFFFFF" fill-opacity="0.3" stroke="#0131CD" stroke-width="6"/>
+    <circle cx="50" cy="50" r="32" fill="#38BDF8" fill-opacity="0.2"/>
+    <path d="M80 80L115 115" stroke="#0131CD" stroke-width="8" stroke-linecap="round"/>
+    <!-- Checkmark inside lens -->
+    <path d="M40 50L47 57L62 42" stroke="#22C55E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

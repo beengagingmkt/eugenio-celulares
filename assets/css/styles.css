@@ -1,0 +1,405 @@
+/* ==========================================================================
+   EUGÊNIO CELULARES — ESTILOS PRINCIPAIS & SISTEMA DE DESIGN
+   Arquitetura: Modern CSS + Variáveis CSS + Suporte Tailwind
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap');
+
+:root {
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Brand Colors: #0131CD (Oficial) & #FFFFFF */
+  --color-primary: #0131CD;
+  --color-primary-hover: #0025A3;
+  --color-primary-light: #EFF5FF;
+  
+  --color-accent: #0284C7;
+  --color-accent-light: #E0F2FE;
+
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1EBE5D;
+  --color-whatsapp-dark: #128C7E;
+
+  --color-warning: #F59E0B;
+  --color-dark: #0F172A;
+  --color-dark-surface: #1E293B;
+  --color-border: #E2E8F0;
+  --color-bg-alt: #F8FAFC;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #334155;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+/* ==========================================================================
+   PADRÃO VISUAL: AZUL (#0131CD) PARA BRANCO (#FFFFFF)
+   ========================================================================== */
+
+.pattern-blue-to-white {
+  background: linear-gradient(180deg, #0128A3 0%, #0131CD 40%, #1A54E8 65%, #E8F0FF 88%, #FFFFFF 100%);
+}
+
+.pattern-hero-gradient {
+  background: radial-gradient(circle at 85% 15%, rgba(68, 128, 255, 0.3) 0%, transparent 50%),
+              linear-gradient(180deg, #012290 0%, #0131CD 45%, #184DE8 70%, #EFF5FF 92%, #FFFFFF 100%);
+}
+
+.pattern-subtle-blue {
+  background: linear-gradient(180deg, #EFF5FF 0%, #FFFFFF 100%);
+}
+
+.pattern-card-blue {
+  background: linear-gradient(145deg, #0131CD 0%, #011E7D 100%);
+}
+
+.circuit-overlay {
+  background-image: radial-gradient(#38BDF8 1px, transparent 1px), radial-gradient(#0131CD 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  opacity: 0.08;
+}
+
+.real-photo-zoom {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+.real-photo-zoom:hover {
+  transform: scale(1.03);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Pulsing Badge / WhatsApp Beacon */
+.pulsing-beacon {
+  position: relative;
+}
+.pulsing-beacon::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background-color: #22C55E;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  animation: pulseBeacon 2s infinite;
+}
+
+@keyframes pulseBeacon {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+/* Float Animations for Hero Elements */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+/* Ticker Infinite Scroll */
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: tickerMove 28s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Card Hover Micro-Interactions */
+.feature-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+/* Interactive Brand Selector Buttons */
+.brand-btn.active {
+  background-color: #0131CD;
+  color: #FFFFFF;
+  border-color: #0131CD;
+  box-shadow: 0 8px 20px -4px rgba(1, 49, 205, 0.45);
+}
+
+.issue-pill.active {
+  background-color: #0284C7;
+  color: #FFFFFF;
+  border-color: #0284C7;
+}
+
+/* ============================================================
+   FAQ ACCORDION — ANIMAÇÃO PREMIUM
+   ============================================================ */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.35s ease;
+}
+.faq-content.open {
+  max-height: 600px;
+  opacity: 1;
+}
+.faq-inner {
+  overflow: visible;
+}
+.faq-chevron {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* Item hover & active state */
+.faq-item {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.faq-item:hover {
+  border-color: #0131CD40;
+  box-shadow: 0 4px 20px rgba(1,49,205,0.07);
+}
+.faq-item.active {
+  border-color: #0131CD;
+  background: linear-gradient(135deg, #f0f5ff 0%, #ffffff 100%);
+  box-shadow: 0 6px 24px rgba(1,49,205,0.10);
+}
+.faq-item.active .faq-trigger-text {
+  color: #0131CD;
+}
+.faq-trigger {
+  transition: background 0.2s ease;
+}
+.faq-trigger:hover {
+  background: rgba(1,49,205,0.03);
+}
+
+/* Number badge */
+.faq-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  background: #EEF2FF;
+  color: #0131CD;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.faq-item.active .faq-num {
+  background: #0131CD;
+  color: #fff;
+}
+
+/* Plus/Minus icon alternative */
+.faq-icon-plus, .faq-icon-minus {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.faq-item:not(.active) .faq-icon-minus { opacity: 0; position: absolute; }
+.faq-item:not(.active) .faq-icon-plus  { opacity: 1; }
+.faq-item.active .faq-icon-plus  { opacity: 0; position: absolute; }
+.faq-item.active .faq-icon-minus { opacity: 1; }
+
+/* Mobile Bottom Bar Safe Padding */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Touch Targets on Mobile */
+.tap-target {
+  min-height: 48px;
+  min-width: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Transitions */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-box {
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-backdrop.show .modal-box {
+  transform: scale(1) translateY(0);
+}
+
+/* ==========================================================================
+   ELEMENTOS DE ESTILO VISUAL — REFERÊNCIA FIX ONLINE
+   ========================================================================== */
+
+/* Botão Pill Verde Neon (Alta Conversão) */
+.btn-pill-green {
+  background-color: #25D366;
+  color: #052e16;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-green:hover {
+  background-color: #22c55e;
+  color: #022c12;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+/* Botão Pill Azul Royal */
+.btn-pill-blue {
+  background-color: #0131CD;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(1, 49, 205, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-blue:hover {
+  background-color: #0025A3;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(1, 49, 205, 0.45);
+}
+
+/* Card Royal Blue Fix Online */
+.card-royal-blue {
+  background: linear-gradient(160deg, #0131CD 0%, #001f80 100%);
+  border-radius: 1.5rem;
+  color: #FFFFFF;
+  box-shadow: 0 10px 30px -5px rgba(1, 49, 205, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-royal-blue:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -5px rgba(1, 49, 205, 0.35);
+}
+
+/* Padrão de Pontos Tecnológicos (Dot Matrix) */
+.dot-grid-accent {
+  background-image: radial-gradient(rgba(1, 49, 205, 0.25) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+.dot-grid-green {
+  background-image: radial-gradient(rgba(37, 211, 102, 0.35) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+

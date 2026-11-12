@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="glBg" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F0F9FF"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="16" fill="url(#glBg)"/>
+  <!-- Tempered Glass Layer hover over phone -->
+  <rect x="125" y="60" width="120" height="200" rx="20" fill="#64748B" opacity="0.3"/>
+  <rect x="145" y="40" width="125" height="205" rx="22" fill="#FFFFFF" fill-opacity="0.75" stroke="#0284C7" stroke-width="2.5" filter="drop-shadow(0 12px 24px rgba(2,132,199,0.2))"/>
+  <!-- Speaker cutout -->
+  <rect x="185" y="48" width="45" height="5" rx="2.5" fill="#0F172A"/>
+  <!-- 9D Shield badge -->
+  <g transform="translate(230, 180)">
+    <rect width="120" height="34" rx="17" fill="#FFFFFF" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.1))"/>
+    <text x="16" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#0284C7">Vidro 9D / 3D</text>
+  </g>
+  <!-- Sparkles -->
+  <path d="M170 100L174 110L184 114L174 118L170 128L166 118L156 114L166 110Z" fill="#38BDF8"/>
+</svg>

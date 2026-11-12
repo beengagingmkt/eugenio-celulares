@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="audBg" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F0FDFA"/>
+      <stop offset="100%" stop-color="#CCFBF1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="16" fill="url(#audBg)"/>
+  <!-- Wireless Earbuds Case & Buds -->
+  <rect x="140" y="90" width="120" height="90" rx="30" fill="#FFFFFF" stroke="#0D9488" stroke-width="3" filter="drop-shadow(0 10px 20px rgba(13,148,136,0.15))"/>
+  <!-- Case lid line -->
+  <line x1="140" y1="125" x2="260" y2="125" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="200" cy="145" r="4" fill="#14B8A6"/>
+
+  <!-- Left bud floating -->
+  <circle cx="110" cy="80" r="14" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+  <rect x="105" y="90" width="10" height="28" rx="5" fill="#0D9488"/>
+
+  <!-- Right bud floating -->
+  <circle cx="290" cy="80" r="14" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+  <rect x="285" y="90" width="10" height="28" rx="5" fill="#0D9488"/>
+
+  <g transform="translate(130, 205)">
+    <rect width="140" height="34" rx="17" fill="#FFFFFF" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.1))"/>
+    <text x="16" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#0D9488">Áudio & Fones</text>
+  </g>
+</svg>
